@@ -10,7 +10,7 @@ token = os.environ['TELEGRAM_BOT_TOKEN']
 
 # https://api.telegram.org/bot{token}/setWebhook?url=https://telebot-college-test.ridwaanhall.repl.co/
 def generate_answer(question):
-    url = f'https://data.bmkg.go.id/DataMKG/TEWS/autogempa.json'
+    url = f'https://api-frontend.kemdikbud.go.id/hit_mhs/{question}'
     response = requests.get(url)
     print(response)
     if response.status_code == 200:
